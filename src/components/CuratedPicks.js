@@ -74,7 +74,7 @@ const CuratedPicks = () => {
         <Row>
             <Col xs={10}>
             <h3 style={{ }}>Curators’ Picks: Emerging</h3>
-            <p style={{fontSize: '1.7rem', marginBottom: '40px', fontWeight: '600', color: '#6b6b6b'}}>The best works by rising talents on Art Gallery, all available now.</p>
+            <p style={{fontSize: '1.7rem', marginBottom: '40px', fontWeight: '500', color: '#6b6b6b'}}>The best works by rising talents on Art Gallery, all available now.</p>
             </Col>
             <Col xs={2}>
             <Button variant="dark"  className="p-1 px-4" style={{borderRadius: '1000px'}}>
@@ -93,8 +93,8 @@ const CuratedPicks = () => {
               }}
             ></div>
             <p className='mt-2' style={{fontSize: '16px', fontWeight: '600' }}>{art.artist}</p>
-            <p style={{ marginTop: '-17px', fontSize: '16px', fontStyle:'italic', color: '#6b6b6b', fontWeight: '600' }}>{art.genre}</p>
-            <p style={{ marginTop: '-17px', fontSize: '16px', fontWeight: '600', color: '#6b6b6b' }}>{art.title}</p>
+            <p style={{ marginTop: '-17px', fontSize: '16px', fontStyle:'italic', color: '#6b6b6b', fontWeight: '400' }}>{art.genre}</p>
+            <p style={{ marginTop: '-17px', fontSize: '15px', fontWeight: '400', color: '#6b6b6b' }}>{art.title}</p>
             <p style={{ marginTop: '-17px', fontSize: '16px', fontWeight: '600' }}>PKR {art.price}</p>
           </Col>
         ))}

@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './components/Login.js';
 import Home from './components/Home.js';
 import { AuthProvider } from './contexts/AuthContext.js';
-function App() {
-  return (
+import { Toaster } from 'react-hot-toast';
+function App() {  return (
     <>
+    <Toaster/>
     <AuthProvider>
       <Router>
         <Routes>

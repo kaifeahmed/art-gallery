@@ -7,15 +7,15 @@ import toast from 'react-hot-toast';
 import { useAuth } from '../contexts/AuthContext';
 import { FcGoogle } from "react-icons/fc";
 
-function Login({ show, handleClose }) {
-  const { login, googleSignIn } = useAuth();
+function Signup({ show, handleClose }) {
+  const { signup, googleSignIn } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const loginUser = async () => {
+  const signupUser = async () => {
     try {
-      await login(email, password);
-      toast.success('You have been logged in.');
+      await signup(email, password);
+      toast.success('You have been signed up.');
       handleClose();
     } catch (error) {
       console.log(error.message);
@@ -23,7 +23,7 @@ function Login({ show, handleClose }) {
     }
   }
 
-  const signInWithGoogle = async () => {
+  const signUpWithGoogle = async () => {
     try {
       googleSignIn();
       handleClose();
@@ -44,7 +44,7 @@ function Login({ show, handleClose }) {
         </Modal.Header>
         <Modal.Body className='p-4'>
           <p style={{ width: '80%', fontSize: '1.6rem', marginTop: '15px', marginBottom: '40px', lineHeight: '1.2', fontWeight: '500' }}>
-            Log in to collect art by the world’s leading artists
+          Sign up to collect art by the world’s leading artists
           </p>
           <Row>
             <Col>
@@ -82,17 +82,17 @@ function Login({ show, handleClose }) {
           </Row>
           <Row>
             <Col>
-              <Button variant="dark" disabled={!email || !password} className="p-1 p-3 w-100" style={{ borderRadius: '1000px' }} onClick={loginUser}>
-                Login
+              <Button variant="dark" disabled={!email || !password} className="p-1 p-3 w-100" style={{ borderRadius: '1000px' }} onClick={signupUser}>
+                Sign Up
               </Button>
             </Col>
           </Row>
           <p className='text-center m-4' style={{ color: '#6a6a6a' }}>or</p>
           <Row>
             <Col>
-            <Button variant="light" onClick={signInWithGoogle} className="p-1 p-3 w-100 d-flex justify-content-center align-items-center gap-2" style={{ borderRadius: '1000px', border: '1px solid black', fontWeight: '500', border: '1px solid black' }}>
-              <FcGoogle /> Continue with Google
-            </Button>
+            <Button variant="light" onClick={signUpWithGoogle} className="p-1 p-3 w-100 d-flex justify-content-center align-items-center gap-2" style={{ borderRadius: '1000px', border: '1px solid black',fontWeight: '500', }}>
+            <FcGoogle /> Sign up with Google
+              </Button>
             </Col>
           </Row>
         </Modal.Body>
@@ -104,4 +104,4 @@ function Login({ show, handleClose }) {
   );
 }
 
-export default Login;
+export default Signup;
