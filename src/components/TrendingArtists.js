@@ -55,7 +55,7 @@ const TrendingArtists = () => {
 
   return (
     <>
-      <Row className='m-0 px-4 py-5 bg-theme' style={{ background: '#ffffffa8', overflowX: 'auto' }}>
+      <Row className='m-0 px-4 py-5 bg-theme' style={{ background: 'rgb(255 255 255 / 79%)', overflowX: 'auto' }}>
         <Row>
             <Col xs={10}>
             <h3 style={{marginBottom: '40px'}}>Trending Artists on Art Gallery</h3>
@@ -79,7 +79,7 @@ const TrendingArtists = () => {
             <Row>
             <Col>
                 <p className='mt-2' style={{fontSize: '16px', fontWeight: '600' }}>{artist.artist}</p>
-                <p className='mb-3' style={{ marginTop: '-20px', fontSize: '14px', fontStyle:'italic', color: '#6b6b6b', fontWeight: '400' }}>{artist.nationality}, b. {artist.born},</p>
+                <p className='mb-3' style={{ marginTop: '-20px', fontSize: '14px', fontStyle:'italic', color: '#6b6b6b', fontWeight: '400' }}>{artist.nationality}, b. {artist.born}</p>
             </Col>
             <Col className='d-flex justify-content-end align-items-center'>
             <Button variant="light"  className="p-1 px-4" style={{borderRadius: '1000px', color: 'black', fontWeight: '500', border: '1px solid black', width: '80%'}}>

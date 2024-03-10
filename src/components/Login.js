@@ -40,7 +40,7 @@ function Login({ show, handleClose }) {
           <Modal.Title>
             <Image rounded width={40} height={40} src="https://source.unsplash.com/random" alt="Art"></Image>
           </Modal.Title>
-          <h5 className='m-0'>Art Gallery</h5>
+          <h5 className='m-0' >Art Gallery</h5>
         </Modal.Header>
         <Modal.Body className='p-4'>
           <p style={{ width: '80%', fontSize: '1.6rem', marginTop: '15px', marginBottom: '40px', lineHeight: '1.2', fontWeight: '500' }}>
@@ -90,7 +90,7 @@ function Login({ show, handleClose }) {
           <p className='text-center m-4' style={{ color: '#6a6a6a' }}>or</p>
           <Row>
             <Col>
-            <Button variant="light" onClick={signInWithGoogle} className="p-1 p-3 w-100 d-flex justify-content-center align-items-center gap-2" style={{ borderRadius: '1000px', border: '1px solid black', fontWeight: '500', border: '1px solid black' }}>
+            <Button variant="light" onClick={signInWithGoogle} className="p-1 p-3 w-100 d-flex justify-content-center align-items-center gap-2" style={{ borderRadius: '1000px', border: '1px solid black', fontWeight: '500' }}>
               <FcGoogle /> Continue with Google
             </Button>
             </Col>

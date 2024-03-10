@@ -1,0 +1,46 @@
+
+
+.navbar-links {
+    font-weight: 800!important;
+}
+/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+/** {
+  scrollbar-width: thin;
+  scrollbar-color: #6A6A6A #DFE9EB;
+}*/
+
+.dropdown-toggle::after {
+  display: none!important;
+}
+
+a:hover {
+  color: blue!important;
+}
+
+.p {
+    line-height: 26px;
+}
+
+.navbar-nav a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    background: blue!important;
+    border-color: blue;
+    color: white;
+}
+  
+.bg-theme-secondary {
+    background: rgb(0 0 0 / 100%);
+}
+
+
+@media only screen and (max-width: 767px ) {
+    .only-desktop {
+        display: none!important;
+    }
+}

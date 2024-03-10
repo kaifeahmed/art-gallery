@@ -30,8 +30,8 @@ const FeaturedArt = () => {
 
   return (
     <>
-      <Row className='m-0 px-4 py-5 bg-theme' style={{background: '#ffffffa8'}}>
-        <h3 style={{marginBottom: '40px'}}>Featured</h3>
+      <Row className='m-0 px-4 py-5 bg-theme' style={{background: 'rgb(255 255 255 / 79%)'}}>
+        <h3 style={{marginBottom: '40px', fontWeight: '600'}}>Featured</h3>
         {featuredArt.map((art, index) => (
           <Col key={art.id} xs={3}>
             <div style={{background: `url("${art.featured_image}")`,backgroundSize: 'cover', height: '250px', borderRadius: '8px'}}></div>

@@ -5,7 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 const Footer = () => {
   return (
     <>
-    <Row className="py-3 px-4 m-0 footer-div d-flex justify-content-between" style={{background: '#ffffffa8'}}>
+    <Row className="py-3 px-4 m-0 footer-div d-flex justify-content-between" style={{background: 'rgb(255 255 255 / 79%)'}}>
     <Col xs={2}>
         <h6 style={{fontSize: '17px'}}>About  Us</h6>
         <div className='mt-3 d-flex flex-column gap-3'>
@@ -42,11 +42,11 @@ const Footer = () => {
         </div>
     </Col>
     </Row>
-    <Row className='px-5 m-0' style={{background: '#ffffffa8'}}>
+    <Row className='px-5 m-0' style={{background: 'rgb(255 255 255 / 79%)'}}>
     <hr className='m-0'/>
     </Row>
 
-    <Row className='px-4 py-3 m-0' style={{background: '#ffffffa8'}}>
+    <Row className='px-4 py-3 m-0' style={{background: 'rgb(255 255 255 / 79%)'}}>
         <Col xs={10} className='d-flex gap-2 justify-content-start align-items-center'>
         <Image rounded width={40} height={40} style={{objectFit:'cover', marginRight: '5px'}} src="https://source.unsplash.com/random"/>
         <p className='p-0 m-0' style={{color: '#6a6a6a', fontSize: '14px'}}>© 2024 Art Gallery</p>

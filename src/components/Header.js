@@ -4,6 +4,7 @@ import Login from './Login';
 import { useAuth } from "../contexts/AuthContext";
 import toast from "react-hot-toast";
 import Signup from "./Signup";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     const auth = useAuth();
@@ -39,7 +40,7 @@ const Header = () => {
 
   return (
     <>
-    <Row className="py-3 px-4 m-0" style={{background: '#ffffffa8'}}>
+    <Row className="py-3 px-4 m-0" style={{background: 'rgb(255 255 255 / 79%)'}}>
         <Col xs={12} md={7} className="d-flex gap-3">
             <Image rounded width={40} height={40} style={{objectFit:'cover'}} src="https://source.unsplash.com/random">
             </Image>
@@ -51,11 +52,11 @@ const Header = () => {
         <Col xs={5} className='desktop-only'>
             <Navbar className="p-0 w-100">
                 <Nav className="p-0 w-100" style={{justifyContent: 'space-between'}}>
-                    <Nav.Link href="#home" className="text-dark" style={{fontWeight: '600'}}>Buy</Nav.Link>
-                    <Nav.Link href="#features" className="text-dark" style={{fontWeight: '600'}}>Sell</Nav.Link>
-                    <Nav.Link href="#pricing" className="text-dark" style={{fontWeight: '600'}}>Gallery</Nav.Link>
-                    <Nav.Link href="#pricing" className="text-dark" style={{fontWeight: '600'}}>Classes</Nav.Link>
-                    <Nav.Link href="#pricing" className="text-dark" style={{fontWeight: '600'}}>Notifications</Nav.Link>
+                    <Link to="/sell" className="text-dark" style={{fontWeight: '600'}}>Buy</Link>
+                    <Link to="/sell" className="text-dark" style={{fontWeight: '600'}}>Sell</Link>
+                    <Link to="/sell" className="text-dark" style={{fontWeight: '600'}}>Gallery</Link>
+                    <Link to="/sell" className="text-dark" style={{fontWeight: '600'}}>Classes</Link>
+                    <Link to="/sell" className="text-dark" style={{fontWeight: '600'}}>Notifications</Link>
                     {!auth.currentUser ?
                     <>
                     <Nav.Link className="p-1"><Button onClick={handleLoginModalOpen} variant="light"  className="p-1 px-4" style={{borderRadius: '1000px',  border: '1px solid black'}}>

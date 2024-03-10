@@ -1,4 +1,4 @@
-import { Row, Col, Button, Image} from 'react-bootstrap';
+import { Row, Col, Button} from 'react-bootstrap';
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
 const Gallery = () => {
@@ -59,7 +59,7 @@ const Gallery = () => {
 
   return (
     <>
-      <Row className='m-0 px-4 py-5 bg-theme' style={{ background: '#ffffffa8', overflowX: 'auto' }}>
+      <Row className='m-0 px-4 py-5 bg-theme' style={{ background: 'rgb(255 255 255 / 79%)', overflowX: 'auto' }}>
         <Row>
             <Col xs={10}>
             <h3 style={{marginBottom: '40px'}}>Artwork by Artists on Art Gallery</h3>
