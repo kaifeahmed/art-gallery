@@ -5,11 +5,11 @@
 }
 *::-webkit-scrollbar-track {
   border-radius: 5px;
-  background-color: #DFE9EB;
+  background-color: #beb9b9;
 }
 
 *::-webkit-scrollbar-track:hover {
-  background-color: #B8C0C2;
+  background-color: #7b7b7c;
 }
 
 *::-webkit-scrollbar-track:active {
@@ -18,7 +18,7 @@
 
 *::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background-color: #6A6A6A;
+  background-color: #E7E7E7;
 }
 
 *::-webkit-scrollbar-thumb:hover {

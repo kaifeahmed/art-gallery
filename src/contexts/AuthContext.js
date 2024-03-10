@@ -13,14 +13,14 @@ export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState()
   const [loading, setLoading] = useState(true)
 
-  function signup(email, password) {
+  function signup(email, password, name) {
     return createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // After signing up, you can add the user's email and name to the Realtime Database
         const user = userCredential.user;
         const userData = {
           email: user.email,
-          name: "Default Name", // You can customize this with the user's actual name
+          name, // You can customize this with the user's actual name
         };
   
         // Create a reference to the 'Users' node in your database

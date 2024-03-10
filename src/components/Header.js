@@ -42,14 +42,13 @@ const Header = () => {
     <>
     <Row className="py-3 px-4 m-0" style={{background: 'rgb(255 255 255 / 79%)'}}>
         <Col xs={12} md={7} className="d-flex gap-3">
-            <Image rounded width={40} height={40} style={{objectFit:'cover'}} src="https://source.unsplash.com/random">
-            </Image>
+            <Link to="/"><Image rounded width={40} height={40} style={{objectFit:'cover'}} src="https://source.unsplash.com/random"/></Link>
             <Form className="w-100">
                 <Form.Control type="search" className="p-2" placeholder="search by artist, art, style, medium">
                 </Form.Control>
             </Form>
         </Col>
-        <Col xs={5} className='desktop-only'>
+        <Col xs={5} className='only-desktop'>
             <Navbar className="p-0 w-100">
                 <Nav className="p-0 w-100" style={{justifyContent: 'space-between'}}>
                     <Link to="/sell" className="text-dark" style={{fontWeight: '600'}}>Buy</Link>
@@ -59,15 +58,15 @@ const Header = () => {
                     <Link to="/sell" className="text-dark" style={{fontWeight: '600'}}>Notifications</Link>
                     {!auth.currentUser ?
                     <>
-                    <Nav.Link className="p-1"><Button onClick={handleLoginModalOpen} variant="light"  className="p-1 px-4" style={{borderRadius: '1000px',  border: '1px solid black'}}>
+                    <Nav.Link className="p-1"><Button onClick={handleLoginModalOpen} variant="light"  className="p-1 blue-button px-4" style={{borderRadius: '1000px',  border: '1px solid black'}}>
                         Log In</Button>
                     </Nav.Link>
-                    <Nav.Link href="#pricing" className="p-1"><Button onClick={handleLogoutModalOpen} variant="dark"  className="p-1 px-4" style={{borderRadius: '1000px'}}>
+                    <Nav.Link href="#pricing" className="p-1"><Button onClick={handleLogoutModalOpen} variant="dark"  className="p-1 blue-button  px-4" style={{borderRadius: '1000px'}}>
                         Sign Up</Button>
                     </Nav.Link>
                     </> :
                     <>
-                    <Nav.Link className="p-1"><Button onClick={logoutUser} variant="light"  className="p-1 px-4" style={{borderRadius: '1000px',  border: '1px solid black'}}>
+                    <Nav.Link className="p-1"><Button onClick={logoutUser} variant="light"  className="p-1 red-button  px-4" style={{borderRadius: '1000px',  border: '1px solid black'}}>
                     Log out</Button>
                     </Nav.Link>
                     <Dropdown align="end">
@@ -75,7 +74,9 @@ const Header = () => {
                         My Account
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                        <Dropdown.Item href="#/action-1"><Image roundedCircle width={40} onClick={() => console.log('test')} height={40}  src="https://source.unsplash.com/random"/>
+                        <Dropdown.Item className="d-flex flex-column gap-2" href="#/action-1">
+                            <Image roundedCircle width={40} onClick={() => console.log('test')} height={40}  src="https://source.unsplash.com/random"/>
+                            <h6 style={{fontSize: '17px', fontWeight: '700'}}>Kaif Ahmed</h6>
                         </Dropdown.Item>
                         <Dropdown.Item href="#/action-3">View Profile</Dropdown.Item>
                         <Dropdown.Item href="#/action-3">Dashboard</Dropdown.Item>

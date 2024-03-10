@@ -69,7 +69,7 @@ const Sell = () => {
   return (
     <>
     <Row className='m-0 px-4 py-5 bg-theme' style={{ background: 'rgb(255 255 255 / 79%)' }}>
-        <Col xs={5} className='d-flex flex-column gap-4'>
+        <Col xs={12} md={5} className='d-flex flex-column gap-4'>
             <h1 style={{fontSize: '102px', lineHeight: '108px', letterSpacing: '-0.01em'}}>Sell art from your collection</h1>
             <p style={{fontSize: '27px', lineHeight: '40px', letterSpacing: '-0.01em'}}>With our global reach and art market expertise, our specialists will find the right buyer for your work.</p>
         <Row>

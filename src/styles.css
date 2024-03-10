@@ -25,13 +25,18 @@ a:hover {
     text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
 }
 
-button:hover {
+.blue-button:hover {
     background: blue!important;
-    border-color: blue;
-    color: white;
+    border-color: blue!important;
+    color: white!important;
+}
+.red-button:hover {
+    background: #dc3545!important;
+    border-color: #dc3545!important;
+    color: white!important;
 }
   
 .bg-theme-secondary {

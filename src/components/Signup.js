@@ -9,12 +9,13 @@ import { FcGoogle } from "react-icons/fc";
 
 function Signup({ show, handleClose }) {
   const { signup, googleSignIn } = useAuth();
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const signupUser = async () => {
     try {
-      await signup(email, password);
+      await signup(email, password, name);
       toast.success('You have been signed up.');
       handleClose();
     } catch (error) {
@@ -49,6 +50,17 @@ function Signup({ show, handleClose }) {
           <Row>
             <Col>
               <Form>
+                <Form.Group as={Row} className="mb-3" controlId="formPlainTextName">
+                  <Col sm="12">
+                    <Form.Control
+                      className='p-3'
+                      type="text"
+                      placeholder="Full Name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                    />
+                  </Col>
+                </Form.Group>
                 <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
                   <Col sm="12">
                     <Form.Control
