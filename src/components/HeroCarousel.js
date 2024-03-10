@@ -7,7 +7,7 @@ const HeroCarousel = () => {
     <Row className='h-100'>
       <Col xs={6} style={{ background: 'url("https://source.unsplash.com/1920x1080/?modern-art")', borderRadius: '8px', height:'75vh', backgroundSize: 'cover' }}>
       </Col>
-      <Col xs={6} className='d-flex justify-content-center align-items-center' style={{borderRadius: '4px', background: 'rgb(255 255 255 / 79%)'}}>
+      <Col xs={6} className='d-flex justify-content-center align-items-center' style={{borderRadius: '4px', background: 'rgb(255 255 255 / 80%)'}}>
         <div style={{width: '70%'}}>
           <h1 className='text-dark' style={{fontWeight: '600'}}>doloribus asperiores repellat</h1>
           <p style={{fontSize: '1.5rem', color: '#6b6b6b'}}>doloribus asperiores repellat doloribus asperiores repellat doloribus asperiores repellat</p>
@@ -22,7 +22,7 @@ const HeroCarousel = () => {
     <Row className='h-100'>
       <Col xs={6} style={{ background: 'url("https://source.unsplash.com/1920x1080/?abstract-art")', borderRadius: '8px', height:'550px', backgroundSize: 'cover' }}>
       </Col>
-      <Col xs={6} className='d-flex justify-content-center align-items-center' style={{borderRadius: '4px', background: 'rgb(255 255 255 / 79%)'}}>
+      <Col xs={6} className='d-flex justify-content-center align-items-center' style={{borderRadius: '4px', background: 'rgb(255 255 255 / 80%)'}}>
         <div style={{width: '70%'}}>
           <h1 className='text-dark' style={{fontWeight: '600'}}>Art Gallery</h1>
           <p style={{fontSize: '1.5rem', color: '#6b6b6b'}}>doloribus asperiores repellat doloribus asperiores repellat doloribus asperiores repellat </p>

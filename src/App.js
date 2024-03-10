@@ -6,7 +6,8 @@ import Home from './components/Home.js';
 import { AuthProvider } from './contexts/AuthContext.js';
 import { Toaster } from 'react-hot-toast';
 import Sell from './components/Sell.js';
-import Layout from './components/Layout.js'; // Import the Layout component
+import Submission from './components/Submission.js';
+import Layout from './components/Layout.js';
 
 function App() {
   return (
@@ -15,18 +16,19 @@ function App() {
       <AuthProvider>
         <Router>
           <Routes>
-            <Route
-              path="/"
-              element={
-                <Layout>
-                  <Routes>
-                    <Route index element={<Home />} />
-                  </Routes>
-                </Layout>
-              }
-            />
-            <Route path="/login" element={<Layout><Login /></Layout>} />
-            <Route path="/sell" element={<Layout><Sell /></Layout>} />
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+            </Route>
+
+            <Route path="/login" element={<Layout />}>
+              <Route index element={<Login />} />
+            </Route>
+
+            <Route path="/sell/*" element={<Layout />}>
+              <Route index element={<Sell />} />
+              <Route path="submission" element={<Submission />} />
+            </Route>
+            
           </Routes>
         </Router>
       </AuthProvider>

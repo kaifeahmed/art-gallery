@@ -55,7 +55,7 @@ const TrendingArtists = () => {
 
   return (
     <>
-      <Row className='m-0 px-4 py-5 bg-theme' style={{ background: 'rgb(255 255 255 / 79%)', overflowX: 'auto' }}>
+      <Row className='m-0 px-4 py-5 bg-theme' style={{ background: 'rgb(255 255 255 / 80%)', overflowX: 'auto' }}>
         <Row>
             <Col xs={10}>
             <h3 style={{marginBottom: '40px'}}>Trending Artists on Art Gallery</h3>

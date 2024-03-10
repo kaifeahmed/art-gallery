@@ -40,7 +40,7 @@ const Header = () => {
 
   return (
     <>
-    <Row className="py-3 px-4 m-0" style={{background: 'rgb(255 255 255 / 79%)'}}>
+    <Row className="py-3 px-4 m-0" style={{background: 'rgb(255 255 255 / 80%)'}}>
         <Col xs={12} md={7} className="d-flex gap-3">
             <Link to="/"><Image rounded width={40} height={40} style={{objectFit:'cover'}} src="https://source.unsplash.com/random"/></Link>
             <Form className="w-100">

@@ -187,7 +187,7 @@ const Sell = () => {
         </Col>
         <Row>
             <Col>
-            <Button variant="dark" className='py-3' style={{borderRadius: '1000px', width: '23%'}}>Get Started</Button>
+            <Button variant="dark" className='py-3 blue-button' style={{borderRadius: '1000px', width: '23%'}}>Get Started</Button>
             </Col>
         </Row>
     </Row>
@@ -248,7 +248,7 @@ Speak with our team.</h1>
             <h1 className='text-dark text-center' style={{fontSize: '57px', lineHeight: '70px', width: '80%', letterSpacing: '-0.01em'}}>
             Sell with Artsy is the simple, contemporary way to sell art from your collection.    
             </h1>
-            <Button variant="dark" className='py-3 px-5 mt-5' style={{ borderRadius: '1000px', border: '1px solid black', width: '25%' }}>
+            <Button variant="dark" className='py-3 blue-button px-5 mt-5' style={{ borderRadius: '1000px', border: '1px solid black', width: '25%' }}>
                 Start Selling
             </Button>
         </Col>
