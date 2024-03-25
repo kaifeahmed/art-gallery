@@ -65,7 +65,7 @@ const TrendingArtists = () => {
             View All Artists</Button>
             </Col>
         </Row>
-        <Row style={{flexWrap: 'nowrap', overflow: 'auto'}}>
+        <Row className='mb-5 pb-2' style={{flexWrap: 'nowrap', overflow: 'auto'}}>
         {trendingArtists.map((artist, index) => (
           <Col key={artist.id} xs={3}>
             <div

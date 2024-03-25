@@ -5,7 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 const Footer = () => {
   return (
     <>
-    <Row className="py-3 px-4 m-0 footer-div d-flex justify-content-between" style={{background: 'rgb(255 255 255 / 80%)'}}>
+    <Row className="py-3 px-4 m-0 footer-div d-flex justify-content-between" style={{background: 'rgb(255 255 255 / 90%)'}}>
     <Col xs={2}>
         <h6 style={{fontSize: '17px'}}>About  Us</h6>
         <div className='mt-3 d-flex flex-column gap-3'>

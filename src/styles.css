@@ -38,6 +38,11 @@ a:hover {
     border-color: #dc3545!important;
     color: white!important;
 }
+.black-button:hover {
+    background: #000000!important;
+    border-color: #000000!important;
+    color: white!important;
+}
   
 .bg-theme-secondary {
     background: rgb(0 0 0 / 100%);

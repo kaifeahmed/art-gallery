@@ -40,7 +40,7 @@ const Header = () => {
 
   return (
     <>
-    <Row className="py-3 px-4 m-0" style={{background: 'rgb(255 255 255 / 80%)'}}>
+    <Row className="py-3 px-4 m-0" style={{background: 'rgb(255 255 255 / 90%)'}}>
         <Col xs={12} md={7} className="d-flex gap-3">
             <Link to="/"><Image rounded width={40} height={40} style={{objectFit:'cover'}} src="https://source.unsplash.com/random"/></Link>
             <Form className="w-100">
@@ -51,8 +51,8 @@ const Header = () => {
         <Col xs={5} className='only-desktop'>
             <Navbar className="p-0 w-100">
                 <Nav className="p-0 w-100" style={{justifyContent: 'space-between'}}>
-                    <Link to="/sell" className="text-dark" style={{fontWeight: '600'}}>Buy</Link>
-                    <Link to="/sell" className="text-dark" style={{fontWeight: '600'}}>Sell</Link>
+                    <Link to="/marketplace" className="text-dark" style={{fontWeight: '600'}}>Buy</Link>
+                    <Link to="/marketplace/sell" className="text-dark" style={{fontWeight: '600'}}>Sell</Link>
                     <Link to="/sell" className="text-dark" style={{fontWeight: '600'}}>Gallery</Link>
                     <Link to="/sell" className="text-dark" style={{fontWeight: '600'}}>Classes</Link>
                     <Link to="/sell" className="text-dark" style={{fontWeight: '600'}}>Notifications</Link>

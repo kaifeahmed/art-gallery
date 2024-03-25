@@ -8,6 +8,9 @@ import { Toaster } from 'react-hot-toast';
 import Sell from './components/Sell.js';
 import Submission from './components/Submission.js';
 import Layout from './components/Layout.js';
+import Marketplace from './components/Marketplace.js';
+import ContactUs from './components/ContactUs.js';
+import AboutUs from './components/AboutUs.js';
 
 function App() {
   return (
@@ -23,9 +26,18 @@ function App() {
             <Route path="/login" element={<Layout />}>
               <Route index element={<Login />} />
             </Route>
+            
+            <Route path="/contact" element={<Layout />}>
+              <Route index element={<ContactUs />} />
+            </Route>
 
-            <Route path="/sell/*" element={<Layout />}>
-              <Route index element={<Sell />} />
+            <Route path="/about" element={<Layout />}>
+              <Route index element={<AboutUs />} />
+            </Route>
+
+            <Route path="/marketplace/*" element={<Layout />}>
+              <Route index element={<Marketplace />} />
+              <Route path="sell" element={<Sell />} />
               <Route path="submission" element={<Submission />} />
             </Route>
             
