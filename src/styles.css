@@ -48,6 +48,18 @@ a:hover {
     background: rgb(0 0 0 / 100%);
 }
 
+.image-gallery {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+  
+.image-preview {
+    width: 32.33%;
+    height: 250px;
+    object-fit: cover;
+}
 
 @media only screen and (max-width: 767px ) {
     .only-desktop {

@@ -16,17 +16,14 @@ export function AuthProvider({ children }) {
   function signup(email, password, name) {
     return createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        // After signing up, you can add the user's email and name to the Realtime Database
         const user = userCredential.user;
         const userData = {
           email: user.email,
-          name, // You can customize this with the user's actual name
+          name,
         };
   
-        // Create a reference to the 'Users' node in your database
         const usersRef = ref(database, 'Users/' + user.uid);
   
-        // Set the user data in the 'Users' node
         set(usersRef, userData)
           .then(() => {
             console.log('User data added to the database');
@@ -36,9 +33,8 @@ export function AuthProvider({ children }) {
           });
       })
       .catch((error) => {
-        // Handle errors during signup
         console.error('Error during signup:', error);
-        throw error; // Rethrow the error to propagate it to the caller
+        throw error;
       });
   }
   
@@ -49,23 +45,18 @@ export function AuthProvider({ children }) {
         console.log(user);
         toast.success('You have been logged in.');
   
-        // Check if the user is a new user (reliable method)
         const isNewUser = result.additionalUserInfo?.isNewUser;
   
-        // If additionalUserInfo is not available, check for the existence of user.uid
         if (!isNewUser && user.uid) {
           console.log("Existing user signed in with Google.");
         } else if (isNewUser && user.uid) {
-          // Add the user's email and name to the Realtime Database
           const userData = {
             email: user.email,
-            name: user.displayName || "Default Name", // Use user's display name or a default if not available
+            name: user.displayName || "Default Name",
           };
   
-          // Create a reference to the 'Users' node in your database
           const usersRef = ref(database, 'Users/' + user.uid);
   
-          // Set the user data in the 'Users' node
           set(usersRef, userData)
             .then(() => {
               console.log('User data added to the database');
@@ -75,15 +66,12 @@ export function AuthProvider({ children }) {
             });
         }
   
-        // Update currentUser state after successful authentication
         const updatedUser = auth.currentUser;
         setCurrentUser(updatedUser);
       })
       .catch((error) => {
-        // Handle Errors here.
         const errorMessage = error.message;
         toast.error(errorMessage);
-        // ...
       });
   }
   
