@@ -36,7 +36,7 @@ const Marketplace = () => {
 
     <FeaturedArt  />
 
- <Row className='m-0 px-4 py-5 bg-theme' style={{ background: 'rgb(255 255 255 / 80%)', overflowX: 'auto' }}>
+  <Row className='m-0 px-4 py-5 bg-theme' style={{ background: 'rgb(255 255 255 / 80%)', overflowX: 'auto' }}>
     <AllArtwork/>
   </Row>
   </>
