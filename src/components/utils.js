@@ -1,4 +1,4 @@
-import { getDatabase, ref, get } from 'firebase/database';
+import { ref, get } from 'firebase/database';
 import { database } from "../firebase";
 
 export async function getAllArtWork() {
