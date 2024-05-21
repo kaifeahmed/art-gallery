@@ -86,8 +86,8 @@ const AddCourse = () => {
     try {
       const artworkRef = ref(database, "courses");
       await push(artworkRef, formData);
-      toast.success('Artwork has been listed.');
-      Navigate('/');
+      toast.success('Course has been listed.');
+      Navigate('/dashboard/my-courses');
     } catch (e) {
       console.log(e.message);
     }

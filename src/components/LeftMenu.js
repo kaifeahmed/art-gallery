@@ -37,7 +37,7 @@ export default function LeftMenu({ onSidebarToggle }) {
         
         <li className="sidebar-title">Listings</li>
         <li onClick={openSidebar}>
-        <Link to="/dashboard/my-listings">
+        <Link to="/dashboard/my-courses">
             <i className="material-icons-two-tone">draw</i>Courses
             <i className="material-icons has-sub-menu">keyboard_arrow_right</i>
         </Link>

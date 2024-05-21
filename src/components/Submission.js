@@ -100,7 +100,7 @@ const Submission = () => {
       const artworkRef = ref(database, "artwork");
       await push(artworkRef, formData);
       toast.success('Artwork has been listed.');
-      Navigate('/');
+      Navigate('/dashboard/my-artwork');
     } catch (e) {
       console.log(e.message);
     }

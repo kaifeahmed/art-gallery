@@ -3,44 +3,6 @@ import { getAllArtWork } from './utils';
 import { useState, useEffect} from 'react'
 
 const FeaturedArt = ({}) => {
-  // const featuredArt = [
-  //   {
-  //     id: '1',
-  //     genre: 'Artsy Curatorial',
-  //     title: 'Women Artists of Contemporary Cubism',
-  //     featured_image: 'https://source.unsplash.com/random',
-  //   },
-  //   {
-  //     id: '2',
-  //     genre: 'Artsy Curatorial',
-  //     title: 'Women Artists of Contemporary Cubism',
-  //     featured_image: 'https://source.unsplash.com/random',
-  //   },
-  //   {
-  //     id: '3',
-  //     genre: 'Artsy Curatorial',
-  //     title: 'Women Artists of Contemporary Cubism',
-  //     featured_image: 'https://source.unsplash.com/random',
-  //   },
-  //   {
-  //     id: '4',
-  //     genre: 'Artsy Curatorial',
-  //     title: 'Women Artists of Contemporary Cubism',
-  //     featured_image: 'https://source.unsplash.com/random',
-  //   },
-  //   {
-  //     id: '4',
-  //     genre: 'Artsy Curatorial',
-  //     title: 'Women Artists of Contemporary Cubism',
-  //     featured_image: 'https://source.unsplash.com/random',
-  //   },
-  //   {
-  //     id: '4',
-  //     genre: 'Artsy Curatorial',
-  //     title: 'Women Artists of Contemporary Cubism',
-  //     featured_image: 'https://source.unsplash.com/random',
-  //   }
-  // ];
 
   const [featuredArt, setFeaturedArt] = useState([]);
 
