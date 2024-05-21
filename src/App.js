@@ -11,7 +11,12 @@ import Layout from './components/Layout.js';
 import Marketplace from './components/Marketplace.js';
 import ContactUs from './components/ContactUs.js';
 import AboutUs from './components/AboutUs.js';
-
+import Classes from './components/Classes.js';
+import DashboardLayout from './components/DashboardLayout.js';
+import AddCourse from './components/AddCourse.js';
+import DashboardHome from './components/DashboardHome.js';
+import MyArtwork from './components/MyArtwork.js';
+import MyCourses from './components/MyCourses.js';
 function App() {
   return (
     <>
@@ -34,11 +39,22 @@ function App() {
             <Route path="/about" element={<Layout />}>
               <Route index element={<AboutUs />} />
             </Route>
+            <Route path="/classes" element={<Layout />}>
+              <Route index element={<Classes />} />
+            </Route>
 
             <Route path="/marketplace/*" element={<Layout />}>
               <Route index element={<Marketplace />} />
               <Route path="sell" element={<Sell />} />
               <Route path="submission" element={<Submission />} />
+            </Route>
+
+            <Route path="/dashboard/*" element={<DashboardLayout />}>
+              <Route index element={<DashboardHome />} />
+              <Route path="add-course" element={<AddCourse/>}/>
+              <Route path="my-courses" element={<MyCourses/>}/>
+              <Route path="my-artwork" element={<MyArtwork/>}/>
+              <Route path="add-artwork" element={<Submission/>}/>
             </Route>
             
           </Routes>

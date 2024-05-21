@@ -1,5 +1,6 @@
 import React from 'react'
 import {Col, Row, Button, Image} from 'react-bootstrap'
+import { Link } from 'react-router-dom';
 const Sell = () => {
     const lastSoldArt = [
         {
@@ -75,7 +76,7 @@ const Sell = () => {
         <Row>
             <Col className='d-flex gap-3'>
                 <Button variant="dark" className='py-3 px-5' style={{ borderRadius: '1000px', border: '1px solid black', width: '100%' }}>
-                Start Selling
+                    <Link to="/marketplace/submission" className="text-white" style={{textDecoration: 'none'}}> Start Selling</Link>
                 </Button>
                 <Button variant="light" className='py-3 px-5' style={{ borderRadius: '1000px', border: '1px solid black', width: '100%' }}>
                 Get in Touch
@@ -248,8 +249,8 @@ Speak with our team.</h1>
             <h1 className='text-dark text-center' style={{fontSize: '57px', lineHeight: '70px', width: '80%', letterSpacing: '-0.01em'}}>
             Sell with Artsy is the simple, contemporary way to sell art from your collection.    
             </h1>
-            <Button variant="dark" className='py-3 blue-button px-5 mt-5' style={{ borderRadius: '1000px', border: '1px solid black', width: '25%' }}>
-                Start Selling
+            <Button variant="dark" className='py-3 px-5' style={{ borderRadius: '1000px', border: '1px solid black', width: '100%' }}>
+                    <Link to="/marketplace/submission" className="text-white" style={{textDecoration: 'none'}}> Start Selling</Link>
             </Button>
         </Col>
     </Row>

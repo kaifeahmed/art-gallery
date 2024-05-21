@@ -53,8 +53,8 @@ const Header = () => {
                 <Nav className="p-0 w-100" style={{justifyContent: 'space-between'}}>
                     <Link to="/marketplace" className="text-dark" style={{fontWeight: '600'}}>Buy</Link>
                     <Link to="/marketplace/sell" className="text-dark" style={{fontWeight: '600'}}>Sell</Link>
-                    <Link to="/sell" className="text-dark" style={{fontWeight: '600'}}>Gallery</Link>
-                    <Link to="/sell" className="text-dark" style={{fontWeight: '600'}}>Classes</Link>
+                    <Link to="/marketplace" className="text-dark" style={{fontWeight: '600'}}>Gallery</Link>
+                    <Link to="/classes" className="text-dark" style={{fontWeight: '600'}}>Classes</Link>
                     <Link to="/sell" className="text-dark" style={{fontWeight: '600'}}>Notifications</Link>
                     {!auth.currentUser ?
                     <>
@@ -79,7 +79,7 @@ const Header = () => {
                             <h6 style={{fontSize: '17px', fontWeight: '700'}}>Kaif Ahmed</h6>
                         </Dropdown.Item>
                         <Dropdown.Item href="#/action-3">View Profile</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Dashboard</Dropdown.Item>
+                        <Dropdown.Item href="/dashboard">Dashboard</Dropdown.Item>
                         <Dropdown.Item href="#/action-2">My Artwork</Dropdown.Item>
                     </Dropdown.Menu>
                     </Dropdown>

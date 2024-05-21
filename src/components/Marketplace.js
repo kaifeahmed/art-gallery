@@ -2,6 +2,7 @@ import { useState, useEffect} from 'react'
 import FeaturedArt from './FeaturedArt';
 import { Col, Row, Button } from 'react-bootstrap';
 import { getAllArtWork } from './utils';
+import AllArtwork from './AllArtwork';
 
 const Marketplace = () => {
   const [artworkListings, setArtworkListings] = useState([]);
@@ -36,17 +37,7 @@ const Marketplace = () => {
     <FeaturedArt  />
 
  <Row className='m-0 px-4 py-5 bg-theme' style={{ background: 'rgb(255 255 255 / 80%)', overflowX: 'auto' }}>
-    {artworkListings.map((artwork) => (
-      <Col xs={4} key={artwork.id} className='mb-4'>
-        <div style={{ background: `url('${artwork.images[0]}') no-repeat center/cover`, height: '280px' }}></div>
-        <div className='d-flex flex-column gap-0 mt-2'>
-          <h6 className='m-0'>{artwork.title}</h6>
-/          <p className='m-0' style={{ fontStyle: 'italic' }}>{artwork.artist}, {artwork.year}</p>
-          <p className='m-0' style={{ fontSize: '14px' }}>{artwork.provenance}</p>
-          <p className='m-0' style={{ fontWeight: 'bold', fontSize: '14px' }}>{artwork.medium}</p>
-        </div>
-      </Col>
-    ))}
+    <AllArtwork/>
   </Row>
   </>
   )
