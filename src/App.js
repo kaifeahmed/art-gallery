@@ -17,6 +17,7 @@ import AddCourse from './components/AddCourse.js';
 import DashboardHome from './components/DashboardHome.js';
 import MyArtwork from './components/MyArtwork.js';
 import MyCourses from './components/MyCourses.js';
+import SingleArt from './components/SingleArt.js';
 function App() {
   return (
     <>
@@ -30,6 +31,9 @@ function App() {
 
             <Route path="/login" element={<Layout />}>
               <Route index element={<Login />} />
+            </Route>
+            <Route path="/single-art" element={<Layout />}>
+              <Route index element={<SingleArt />} />
             </Route>
             
             <Route path="/contact" element={<Layout />}>
