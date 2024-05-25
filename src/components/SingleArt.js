@@ -120,7 +120,7 @@ const SingleArt = () => {
   <Col xs={6} className="px-4">
     <h2 className="mb-3" style={{fontWeight: '600'}}>Tunji Adeniyi-Jones</h2>
       <p>British, b. 1992</p>
-      <Button variant="primary" className="me-2">Follow</Button>
+      <Button variant="primary" className="mb-2">Follow</Button>
       <p>With vibrant swirls of color and an eye towards West African aesthetics, Tunji Adeniyi-Jones paints Black bodies in repose and lush, mystical flora and fauna. The U.K.-born, New York-based artist draws on both his Yoruba heritage and diasporic experiences to inform his beguiling canvases, where he honors his ancestors’ ceremonies and celebrations. Adeniyi-Jones received his MFA from Yale and has exhibited in New York, Los Angeles, Stockholm, and London. His work regularly sells for six figures on the secondary market. Adeniyi-Jones believes that his portrayals of the body can transcend linguistic barriers and present a common language of movement and intimacy.</p>
       <p><strong>High Auction Record:</strong> £302.4k, Phillips, 2021</p>
       <p><strong>Blue Chip:</strong> Represented by internationally recognized galleries.</p>

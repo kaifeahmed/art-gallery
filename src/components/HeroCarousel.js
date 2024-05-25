@@ -9,7 +9,7 @@ const HeroCarousel = () => {
       </Col>
       <Col xs={6} className='d-flex justify-content-center align-items-center' style={{borderRadius: '4px', background: 'rgb(255 255 255 / 80%)'}}>
         <div style={{width: '70%'}}>
-          <h1 className='text-dark' style={{fontWeight: '600'}}>doloribus asperiores repellat</h1>
+          <h1 className='text-dark' style={{fontWeight: '600'}}>Art Gallery</h1>
           <p style={{fontSize: '1.5rem', color: '#6b6b6b'}}>doloribus asperiores repellat doloribus asperiores repellat doloribus asperiores repellat</p>
           <Button variant='light' className="p-3 w-50 text-dark" style={{borderRadius: '8px', fontWeight: '500', fontSize: '18px', border: '1px solid black'}}>
             Browse
