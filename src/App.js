@@ -18,6 +18,7 @@ import DashboardHome from './components/DashboardHome.js';
 import MyArtwork from './components/MyArtwork.js';
 import MyCourses from './components/MyCourses.js';
 import SingleArt from './components/SingleArt.js';
+import PaymentFormParent from './components/PaymentFormParent.js';
 function App() {
   return (
     <>
@@ -32,8 +33,8 @@ function App() {
             <Route path="/login" element={<Layout />}>
               <Route index element={<Login />} />
             </Route>
-            <Route path="/single-art" element={<Layout />}>
-              <Route index element={<SingleArt />} />
+            <Route path="/single-art/:id" element={<Layout />}>
+              <Route index element={<PaymentFormParent />} />
             </Route>
             
             <Route path="/contact" element={<Layout />}>
@@ -43,8 +44,13 @@ function App() {
             <Route path="/about" element={<Layout />}>
               <Route index element={<AboutUs />} />
             </Route>
+            
             <Route path="/classes" element={<Layout />}>
               <Route index element={<Classes />} />
+            </Route>
+
+            <Route path="/artwork" element={<Layout />}>
+              <Route index element={<PaymentFormParent />} />
             </Route>
 
             <Route path="/marketplace/*" element={<Layout />}>

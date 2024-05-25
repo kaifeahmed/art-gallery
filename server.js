@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const stripe = require('stripe')('sk_test_51PK8GOADaBtYLeCSdErdgxrzny4GPVzKgNF8hLDsowLjEumvyyliASogUrzCr6M2zCGDiAO9pMSyc5HaWeDHFOtJ002FwpFymb');
 const multer = require('multer');
 const path = require('path');
 
@@ -19,6 +20,57 @@ app.use(function(req, res, next) {
     next();
 });
 
+
+app.post('/create-payment-intent', async (req, res) => {
+  const { amount } = req.body;
+
+  try {
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount,
+      currency: 'usd',
+    });
+
+    res.status(200).json({ clientSecret: paymentIntent.client_secret });
+  } catch (error) {
+    console.error('Error creating payment intent:', error);
+    res.status(500).json({ error: 'Unable to create payment intent' });
+  }
+});
+
+app.post('/capture-payment', async (req, res) => {
+  const { tokenId, amount } = req.body;
+
+  try {
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount,
+      currency: 'usd',
+      payment_method_data: {
+        type: 'card',
+        card: {
+          token: tokenId,
+        },
+      },
+      confirmation_method: 'manual',
+      confirm: true,
+      return_url: 'http://localhost:300', // Add your desired return URL
+    });
+
+    if (paymentIntent.status === 'succeeded') {
+      res.status(200).json({ success: true, paymentIntent });
+    } else {
+      // If payment failed, check for specific errors and send appropriate error message
+      let errorMessage = 'Payment failed';
+      if (paymentIntent.last_payment_error && paymentIntent.last_payment_error.message) {
+        errorMessage = paymentIntent.last_payment_error.message;
+      }
+      res.status(400).json({ error: errorMessage });
+      console.log('Payment failed:', errorMessage);
+    }
+  } catch (error) {
+    console.error('Error capturing payment:', error.message);
+    res.status(500).json({ error: error.message});
+  }
+});
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
