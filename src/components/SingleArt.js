@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 import { getDatabase, ref, get, push } from 'firebase/database';
 import { useAuth } from '../contexts/AuthContext';
 import { Col, Row, Button, Modal } from 'react-bootstrap';
+import toast from 'react-hot-toast';
 
 const SingleArt = () => {
   const { id } = useParams();
@@ -76,6 +77,8 @@ const SingleArt = () => {
                 amount: 400
             };
             await push(paymentsRef, data);
+            toast.success("Artwork has been successfully purchased");
+            handleClose();
         } catch (error) {
             console.log('Error saving data: ', error);
         }
@@ -90,7 +93,7 @@ const SingleArt = () => {
 
   return (
     <>
-    <Row className='m-0 px-4 py-5 bg-theme' style={{ background: 'rgb(255 255 255 / 80%)', overflowX: 'auto' }}>
+    <Row className='m-0 px-4 py-5 bg-theme' style={{ background: 'rgb(255 255 255 / 90%)', overflowX: 'auto' }}>
      <Col xs ={7}>
        <img src={artworkData.images ? artworkData.images[0] : ''} alt="Artwork by Tunji Adeniyi-Jones" className="img-fluid rounded" />
      </Col>
@@ -105,7 +108,7 @@ const SingleArt = () => {
             <Button variant="primary" className="me-2 w-50 p-4 mt-4 btn-theme" style={{borderRadius: '50px'}} onClick={handleShow}>Purchase</Button>
         </Col>
     </Row>
-<Row className='px-4 py-5 bg-theme' style={{ background: 'rgb(255 255 255 / 80%)', overflowX: 'auto' }}>
+<Row className='px-4 py-5 bg-theme' style={{ background: 'rgb(255 255 255 / 90%)', overflowX: 'auto' }}>
   <Col xs= {6} className="px-4">
       <h2 className="mb-3" style={{fontWeight: '600'}}>About the work</h2>
       <p style={{fontSize: '15px'}}><strong>Materials:</strong> Giclee print on 300gsm Somerset velvet mould-made paper with hand made deckled edges</p>
@@ -127,12 +130,12 @@ const SingleArt = () => {
       <p><strong>Collected by a major museum</strong> Studio Museum in Harlem|ICA Miami</p>
   </Col>
 </Row>
-<Row  className='m-0 px-4 py-3 bg-theme' style={{ background: 'rgb(255 255 255 / 80%)', overflowX: 'auto' }}>
+<Row  className='m-0 px-4 py-3 bg-theme' style={{ background: 'rgb(255 255 255 / 90%)', overflowX: 'auto' }}>
     <Col xs= {12}>
     <h2>Other works by Tunji Adeniyi-Jones</h2>
     </Col>
 </Row>
-<Row  className='m-0 px-4 pb-5 bg-theme' style={{ background: 'rgb(255 255 255 / 80%)', overflowX: 'auto' }}>
+<Row  className='m-0 px-4 pb-5 bg-theme' style={{ background: 'rgb(255 255 255 / 90%)', overflowX: 'auto' }}>
   <Col xs= {3} className="d-flex flex-column gap-1">
     <img src="https://img.freepik.com/free-photo/colorful-design-with-spiral-design_188544-9588.jpg?t=st=1716602028~exp=1716605628~hmac=066235c94a67c677be55bc0ecb0c8eac42ebcfe882b7c5681d8dc519c9abcb69&w=996" alt="Artwork by Tunji Adeniyi-Jones" className="img-fluid rounded" /> 
     <p className="m-0">Tunji Adeniyi-Jones</p>

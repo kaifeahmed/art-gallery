@@ -13,19 +13,6 @@ const PaymentForm = ({ amount }) => {
   const Navigate = useNavigate();
   const auth = useAuth();
 
-//   useEffect(() => {
-//     const fetchDetails = async () => {
-//       try {
-//         const listingDetails = await getListingByID(bookingDetails.listingId);
-//         setListingData(listingDetails);
-//               } catch (error) {
-//         console.error('Error fetching listing details:', error);
-//       }
-//     };
-  
-//     fetchDetails();
-//   }, [bookingId]); 
-  
 
   const handleSubmit = async (event) => {
     event.preventDefault();

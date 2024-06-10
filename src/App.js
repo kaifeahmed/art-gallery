@@ -19,6 +19,8 @@ import MyArtwork from './components/MyArtwork.js';
 import MyCourses from './components/MyCourses.js';
 import SingleArt from './components/SingleArt.js';
 import PaymentFormParent from './components/PaymentFormParent.js';
+import PaymentFormParentSingleCourse from './components/PaymentFormParentSingleCourse.js';
+import UpdateCourseDashboard from './components/SingleCourseDashboard.js';
 function App() {
   return (
     <>
@@ -35,6 +37,9 @@ function App() {
             </Route>
             <Route path="/single-art/:id" element={<Layout />}>
               <Route index element={<PaymentFormParent />} />
+            </Route>
+            <Route path="/single-course/:id" element={<Layout />}>
+              <Route index element={<PaymentFormParentSingleCourse />} />
             </Route>
             
             <Route path="/contact" element={<Layout />}>
@@ -64,6 +69,7 @@ function App() {
               <Route path="add-course" element={<AddCourse/>}/>
               <Route path="my-courses" element={<MyCourses/>}/>
               <Route path="my-artwork" element={<MyArtwork/>}/>
+              <Route path="listing/:id" element={<UpdateCourseDashboard/>}/>
               <Route path="add-artwork" element={<Submission/>}/>
             </Route>
             

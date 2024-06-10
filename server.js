@@ -5,11 +5,19 @@ const stripe = require('stripe')('sk_test_51PK8GOADaBtYLeCSdErdgxrzny4GPVzKgNF8h
 const multer = require('multer');
 const path = require('path');
 
+const { google } = require('googleapis');
+const { OAuth2Client } = require('google-auth-library');
 
 const app = express();
 
 app.use(bodyParser.json());
 app.use(cors());
+const SCOPES = ['https://www.googleapis.com/auth/classroom.courses'];
+const client_id = "305247874592-u699aebcvomna2v5nobmpvnre12i66t1.apps.googleusercontent.com";
+const client_secret = "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";
+const redirect_uris = "http://localhost:3000/dashboard/add-course";
+
+const oAuth2Client = new OAuth2Client(client_id, client_secret, redirect_uris);
 
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -20,6 +28,57 @@ app.use(function(req, res, next) {
     next();
 });
 
+
+// Google Classroom OAuth and Course Creation Routes
+app.get('/auth/url', (req, res) => {
+  const authUrl = oAuth2Client.generateAuthUrl({
+    access_type: 'offline',
+    scope: SCOPES,
+  });
+  res.redirect(authUrl);
+});
+
+// Proxy the OAuth authorization URL through your backend server to bypass CORS issues
+app.get('/proxy-auth/url', (req, res) => {
+  const authUrl = oAuth2Client.generateAuthUrl({
+    access_type: 'offline',
+    scope: SCOPES,
+  });
+  res.json({ authUrl });
+});
+
+// Step 3: Handle OAuth2 callback and exchange authorization code for token
+app.get('/auth/callback', async (req, res) => {
+  const { code } = req.body;
+  const { tokens } = await oAuth2Client.getToken(code);
+  oAuth2Client.setCredentials(tokens);
+  res.send('Authorization successful!');
+});
+
+// Step 4: Use the access token to create the course
+app.post('/create-course', async (req, res) => {
+  const { code } = req.body;
+  console.log(code);
+  const { tokens } = await oAuth2Client.getToken(code);
+  console.log(tokens);
+  oAuth2Client.setCredentials(tokens);
+
+  const classroom = google.classroom({ version: 'v1', auth: oAuth2Client });
+  console.log('after');
+  try {
+    const {name} = req.body;
+    const response = await classroom.courses.create({
+      requestBody: {
+        name: name,
+        ownerId: 'me', // 'me' represents the authenticated user
+      },
+    });
+    res.json(response.data);
+  } catch (error) {
+    console.error('Error creating course:', error);
+    res.status(500).json({ error: 'Failed to create course' });
+  }
+});
 
 app.post('/create-payment-intent', async (req, res) => {
   const { amount } = req.body;
