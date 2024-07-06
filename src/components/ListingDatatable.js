@@ -94,7 +94,7 @@ const ListingDatatable = ({ data, columns }) => {
                   }}                  
                 >
                   <div className="col-12" style={{ justifyContent: 'space-between', display: 'flex', flexDirection: 'column' }}>
-                    <p style={priceTagStyle}>{row.values.name}</p>
+                    <p style={priceTagStyle}>{row.values.name ? row.values.name : 'Course'}</p>
                     <div className="row">
                       <div className="col-12"></div>
                       <div className="row">

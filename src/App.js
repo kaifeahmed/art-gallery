@@ -21,6 +21,8 @@ import SingleArt from './components/SingleArt.js';
 import PaymentFormParent from './components/PaymentFormParent.js';
 import PaymentFormParentSingleCourse from './components/PaymentFormParentSingleCourse.js';
 import UpdateCourseDashboard from './components/SingleCourseDashboard.js';
+import AddAnnouncement from './components/AddAnnouncement.js';
+import Announcements from './components/Announcements.js';
 function App() {
   return (
     <>
@@ -44,6 +46,10 @@ function App() {
             
             <Route path="/contact" element={<Layout />}>
               <Route index element={<ContactUs />} />
+            </Route>
+            
+            <Route path="/announcements" element={<Layout />}>
+              <Route index element={<Announcements />} />
             </Route>
 
             <Route path="/about" element={<Layout />}>
@@ -71,6 +77,7 @@ function App() {
               <Route path="my-artwork" element={<MyArtwork/>}/>
               <Route path="listing/:id" element={<UpdateCourseDashboard/>}/>
               <Route path="add-artwork" element={<Submission/>}/>
+              <Route path="add-announcement" element={<AddAnnouncement/>}/>
             </Route>
             
           </Routes>

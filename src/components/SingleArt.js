@@ -95,7 +95,7 @@ const SingleArt = () => {
     <>
     <Row className='m-0 px-4 py-5 bg-theme' style={{ background: 'rgb(255 255 255 / 90%)', overflowX: 'auto' }}>
      <Col xs ={7}>
-       <img src={artworkData.images ? artworkData.images[0] : ''} alt="Artwork by Tunji Adeniyi-Jones" className="img-fluid rounded" />
+       <img src={artworkData.images ? artworkData.images[0] : ''} style={{height: "500px", objectFit: 'cover', width: "100%"}} alt="Artwork by Tunji Adeniyi-Jones" className="img-fluid rounded" />
      </Col>
      <Col xs={5} className="p-5">
           <h1 className="mb-4" style={{fontWeight: '600'}}>{artworkData.title}</h1>
@@ -130,12 +130,12 @@ const SingleArt = () => {
       <p><strong>Collected by a major museum</strong> Studio Museum in Harlem|ICA Miami</p>
   </Col>
 </Row>
-<Row  className='m-0 px-4 py-3 bg-theme' style={{ background: 'rgb(255 255 255 / 90%)', overflowX: 'auto' }}>
+{/* <Row  className='m-0 px-4 py-3 bg-theme' style={{ background: 'rgb(255 255 255 / 90%)', overflowX: 'auto' }}>
     <Col xs= {12}>
     <h2>Other works by Tunji Adeniyi-Jones</h2>
     </Col>
-</Row>
-<Row  className='m-0 px-4 pb-5 bg-theme' style={{ background: 'rgb(255 255 255 / 90%)', overflowX: 'auto' }}>
+</Row> */}
+{/* <Row  className='m-0 px-4 pb-5 bg-theme' style={{ background: 'rgb(255 255 255 / 90%)', overflowX: 'auto' }}>
   <Col xs= {3} className="d-flex flex-column gap-1">
     <img src="https://img.freepik.com/free-photo/colorful-design-with-spiral-design_188544-9588.jpg?t=st=1716602028~exp=1716605628~hmac=066235c94a67c677be55bc0ecb0c8eac42ebcfe882b7c5681d8dc519c9abcb69&w=996" alt="Artwork by Tunji Adeniyi-Jones" className="img-fluid rounded" /> 
     <p className="m-0">Tunji Adeniyi-Jones</p>
@@ -164,7 +164,7 @@ const SingleArt = () => {
     <p className="m-0">New Art Editions</p>
     <p className="m-0">€795</p>
   </Col>
-</Row>
+</Row> */}
 
   <Modal show={show} onHide={handleClose} animation={false} centered size="md">
     <Modal.Header closeButton>

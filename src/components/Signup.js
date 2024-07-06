@@ -39,7 +39,7 @@ function Signup({ show, handleClose }) {
       <Modal show={show} onHide={handleClose} animation={false}>
         <Modal.Header className='d-flex gap-3' closeButton>
           <Modal.Title>
-            <Image rounded width={40} height={40} src="https://source.unsplash.com/random" alt="Art"></Image>
+            <Image rounded width={40} height={40} src="https://picsum.photos/1920/1080" alt="Art"></Image>
           </Modal.Title>
           <h5 className='m-0'>Art Gallery</h5>
         </Modal.Header>

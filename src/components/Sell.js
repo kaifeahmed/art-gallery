@@ -7,7 +7,7 @@ const Sell = () => {
           id: '1',
           artist: 'Nimah Gobir',
           title: 'Italian Dream',
-          featured_image: 'https://source.unsplash.com/random',
+          featured_image: 'https://picsum.photos/1920/1080',
           price: '2000'
         },
         {
@@ -15,7 +15,7 @@ const Sell = () => {
           artist: 'Nimah Gobir',
           genre: 'Artsy Curatorial',
           title: 'Italian Dream',
-          featured_image: 'https://source.unsplash.com/random',
+          featured_image: 'https://picsum.photos/1920/1080',
           price: '2000'
         },
         {
@@ -23,7 +23,7 @@ const Sell = () => {
           artist: 'Nimah Gobir',
           genre: 'Artsy Curatorial',
           title: 'Italian Dream',
-          featured_image: 'https://source.unsplash.com/random',
+          featured_image: 'https://picsum.photos/1920/1080',
           price: '2000'
         },
         {
@@ -31,7 +31,7 @@ const Sell = () => {
           artist: 'Nimah Gobir',
           genre: 'Artsy Curatorial',
           title: 'Italian Dream',
-          featured_image: 'https://source.unsplash.com/random',
+          featured_image: 'https://picsum.photos/1920/1080',
           price: '2000'
         },
         {
@@ -39,7 +39,7 @@ const Sell = () => {
           artist: 'Nimah Gobir',
           genre: 'Artsy Curatorial',
           title: 'Italian Dream',
-          featured_image: 'https://source.unsplash.com/random',
+          featured_image: 'https://picsum.photos/1920/1080',
           price: '2000'
         },
         {
@@ -47,7 +47,7 @@ const Sell = () => {
           artist: 'Nimah Gobir',
           genre: 'Artsy Curatorial',
           title: 'Italian Dream',
-          featured_image: 'https://source.unsplash.com/random',
+          featured_image: 'https://picsum.photos/1920/1080',
           price: '2000'
         },
         {
@@ -55,7 +55,7 @@ const Sell = () => {
           artist: 'Nimah Gobir',
           genre: 'Artsy Curatorial',
           title: 'Italian Dream',
-          featured_image: 'https://source.unsplash.com/random',
+          featured_image: 'https://picsum.photos/1920/1080',
           price: '2000'
         },
         {
@@ -63,7 +63,7 @@ const Sell = () => {
           artist: 'Nimah Gobir',
           genre: 'Artsy Curatorial',
           title: 'Italian Dream',
-          featured_image: 'https://source.unsplash.com/random',
+          featured_image: 'https://picsum.photos/1920/1080',
           price: '2000'
         },
       ];
@@ -115,7 +115,7 @@ const Sell = () => {
         <Col>
             <Row>
                 <Col>
-                <div style={{background: 'url("https://source.unsplash.com/1920x1080/?modern-art"', borderRadius: '8px', width: '100%', height: '420px', backgroundSize: 'cover'}}></div>
+                <div style={{background: 'url("https://picsum.photos/1920/1080?modern-art"', borderRadius: '8px', width: '100%', height: '420px', backgroundSize: 'cover'}}></div>
                 </Col>
             </Row>
             <Row>
@@ -128,7 +128,7 @@ const Sell = () => {
         <Col>
             <Row>
                 <Col>
-                <div style={{background: 'url("https://source.unsplash.com/1920x1080/?oil-painting"', borderRadius: '8px', width: '100%', height: '420px', backgroundSize: 'cover'}}></div>
+                <div style={{background: 'url("https://picsum.photos/1920/1080?oil-painting"', borderRadius: '8px', width: '100%', height: '420px', backgroundSize: 'cover'}}></div>
                 </Col>
             </Row>
             <Row>
@@ -142,7 +142,7 @@ const Sell = () => {
         <Col>
             <Row>
                 <Col>
-                <div style={{background: 'url("https://source.unsplash.com/1920x1080/?water-color"', borderRadius: '8px', width: '100%', height: '420px', backgroundSize: 'cover'}}></div>
+                <div style={{background: 'url("https://picsum.photos/1920/1080?water-color"', borderRadius: '8px', width: '100%', height: '420px', backgroundSize: 'cover'}}></div>
                 </Col>
             </Row>
             <Row>

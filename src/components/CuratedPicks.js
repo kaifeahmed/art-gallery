@@ -7,7 +7,7 @@ const CuratedPicks = () => {
       artist: 'Nimah Gobir',
       genre: 'Artsy Curatorial',
       title: 'Italian Dream',
-      featured_image: 'https://source.unsplash.com/random',
+      featured_image: 'https://picsum.photos/1920/1080',
       price: '2000'
     },
     {
@@ -15,7 +15,7 @@ const CuratedPicks = () => {
       artist: 'Nimah Gobir',
       genre: 'Artsy Curatorial',
       title: 'Italian Dream',
-      featured_image: 'https://source.unsplash.com/random',
+      featured_image: 'https://picsum.photos/1920/1080',
       price: '2000'
     },
     {
@@ -23,7 +23,7 @@ const CuratedPicks = () => {
       artist: 'Nimah Gobir',
       genre: 'Artsy Curatorial',
       title: 'Italian Dream',
-      featured_image: 'https://source.unsplash.com/random',
+      featured_image: 'https://picsum.photos/1920/1080',
       price: '2000'
     },
     {
@@ -31,7 +31,7 @@ const CuratedPicks = () => {
       artist: 'Nimah Gobir',
       genre: 'Artsy Curatorial',
       title: 'Italian Dream',
-      featured_image: 'https://source.unsplash.com/random',
+      featured_image: 'https://picsum.photos/1920/1080',
       price: '2000'
     },
     {
@@ -39,7 +39,7 @@ const CuratedPicks = () => {
       artist: 'Nimah Gobir',
       genre: 'Artsy Curatorial',
       title: 'Italian Dream',
-      featured_image: 'https://source.unsplash.com/random',
+      featured_image: 'https://picsum.photos/1920/1080',
       price: '2000'
     },
     {
@@ -47,7 +47,7 @@ const CuratedPicks = () => {
       artist: 'Nimah Gobir',
       genre: 'Artsy Curatorial',
       title: 'Italian Dream',
-      featured_image: 'https://source.unsplash.com/random',
+      featured_image: 'https://picsum.photos/1920/1080',
       price: '2000'
     },
     {
@@ -55,7 +55,7 @@ const CuratedPicks = () => {
       artist: 'Nimah Gobir',
       genre: 'Artsy Curatorial',
       title: 'Italian Dream',
-      featured_image: 'https://source.unsplash.com/random',
+      featured_image: 'https://picsum.photos/1920/1080',
       price: '2000'
     },
     {
@@ -63,7 +63,7 @@ const CuratedPicks = () => {
       artist: 'Nimah Gobir',
       genre: 'Artsy Curatorial',
       title: 'Italian Dream',
-      featured_image: 'https://source.unsplash.com/random',
+      featured_image: 'https://picsum.photos/1920/1080',
       price: '2000'
     },
   ];

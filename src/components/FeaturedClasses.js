@@ -28,7 +28,7 @@ const FeaturedClasses = ({}) => {
         {featuredClasses.map((course, index) => (
           <Col key={course.id} xs={2}>
             <div style={{background: `url("${course.images[0]}")`,backgroundSize: `140px`, height: `140px`, borderRadius: '8px'}}></div>
-            <p className='mt-2'>{course.price}</p>
+            <p className='mt-2'>{course.title}</p>
           </Col>
         ))}
       </Row>

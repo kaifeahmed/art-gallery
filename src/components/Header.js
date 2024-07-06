@@ -42,7 +42,7 @@ const Header = () => {
     <>
     <Row className="py-3 px-4 m-0" style={{background: 'rgb(255 255 255 / 90%)'}}>
         <Col xs={12} md={7} className="d-flex gap-3">
-            <Link to="/"><Image rounded width={40} height={40} style={{objectFit:'cover'}} src="https://source.unsplash.com/random"/></Link>
+            <Link to="/"><Image rounded width={40} height={40} style={{objectFit:'cover'}} src="https://picsum.photos/1920/1080"/></Link>
             <Form className="w-100">
                 <Form.Control type="search" className="p-2" placeholder="search by artist, art, style, medium">
                 </Form.Control>
@@ -55,7 +55,7 @@ const Header = () => {
                     <Link to="/marketplace/sell" className="text-dark" style={{fontWeight: '600'}}>Sell</Link>
                     <Link to="/marketplace" className="text-dark" style={{fontWeight: '600'}}>Gallery</Link>
                     <Link to="/classes" className="text-dark" style={{fontWeight: '600'}}>Classes</Link>
-                    <Link to="/sell" className="text-dark" style={{fontWeight: '600'}}>Notifications</Link>
+                    <Link to="/announcements" className="text-dark" style={{fontWeight: '600'}}>Announcements</Link>
                     {!auth.currentUser ?
                     <>
                     <Nav.Link className="p-1"><Button onClick={handleLoginModalOpen} variant="light"  className="p-1 blue-button px-4" style={{borderRadius: '1000px',  border: '1px solid black'}}>
@@ -75,12 +75,10 @@ const Header = () => {
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
                         <Dropdown.Item className="d-flex flex-column gap-2" href="#/action-1">
-                            <Image roundedCircle width={40} onClick={() => console.log('test')} height={40}  src="https://source.unsplash.com/random"/>
+                            <Image roundedCircle width={40} onClick={() => console.log('test')} height={40}  src="https://picsum.photos/1920/1080"/>
                             <h6 style={{fontSize: '17px', fontWeight: '700'}}>Kaif Ahmed</h6>
                         </Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">View Profile</Dropdown.Item>
-                        <Dropdown.Item href="/dashboard">Dashboard</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">My Artwork</Dropdown.Item>
+                        <Dropdown.Item href="/dashboard/my-courses" className="text-center w-100">Dashboard</Dropdown.Item>
                     </Dropdown.Menu>
                     </Dropdown>
                     </>

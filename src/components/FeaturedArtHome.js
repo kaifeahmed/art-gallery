@@ -24,7 +24,7 @@ const FeaturedArtHome = ({}) => {
         <h3 style={{marginBottom: '40px', fontWeight: '600'}}>Featured Artwork</h3>
         {featuredArt.map((art, index) => (
           <Col key={art.id} xs={3}>
-            <div style={{background: `url("${art.featured_image}")`,backgroundSize: `250px`, height: `250px`, borderRadius: '8px'}}></div>
+            <div style={{background: `url("${art.images[0]}")`,backgroundSize: `cover`, height: `250px`, borderRadius: '8px'}}></div>
             <p className='mt-2'>{art.genre}</p>
             <p style={{marginTop: '-17px', fontSize: '24px', fontWeight: '600'}}>{art.title}</p>
           </Col>

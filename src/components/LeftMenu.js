@@ -23,17 +23,12 @@ export default function LeftMenu({ onSidebarToggle }) {
   return (
     <>
         <ul className="accordion-menu">
-        <li className="sidebar-title">Apps</li>
-        <li onClick={openSidebar}>
+        {/* <li className="sidebar-title">Apps</li> */}
+        {/* <li onClick={openSidebar}>
             <Link to="/dashboard"  exact className={location.pathname === '/dashboard' ? 'active' : ''}>
             <i className="material-icons-two-tone">dashboard</i> <span>Dashboard</span>
             </Link>
-        </li>
-        <li onClick={openSidebar}>
-            <Link to="/dashboard/setting" exact className={location.pathname === '/dashboard/setting' ? 'active' : ''}>
-            <i className="material-icons-two-tone">settings</i><span>Settings</span>
-            </Link>
-        </li>
+        </li> */}
         
         <li className="sidebar-title">Listings</li>
         <li onClick={openSidebar}>
@@ -49,6 +44,22 @@ export default function LeftMenu({ onSidebarToggle }) {
                 <>
                     <li>
                     <Link to="/dashboard/add-course" exact className={location.pathname === '/dashboard/add-listing' ? 'active' : ''}><span>Add Course</span></Link>
+                    </li>
+                </>
+            )}
+        </ul>
+        </li>
+
+        <li onClick={openSidebar}>
+        <Link to="/dashboard/my-courses">
+            <i className="material-icons-two-tone">draw</i>Announcements
+            <i className="material-icons has-sub-menu">keyboard_arrow_right</i>
+        </Link>
+        <ul className="sub-menu">
+            {role === 'Boat Owner' && (
+                <>
+                    <li>
+                        <Link to="/dashboard/add-announcement" exact className={location.pathname === '/dashboard/add-announcement' ? 'active' : ''}><span>Add Announcements</span></Link>
                     </li>
                 </>
             )}

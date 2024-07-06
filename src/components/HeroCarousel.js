@@ -5,7 +5,7 @@ const HeroCarousel = () => {
     <Carousel controls={false} variant='dark' indicators={true} fade className='mt-4' style={{ height: '82vh' }}>
     <Carousel.Item className='h-100'>
     <Row className='h-100'>
-      <Col xs={6} style={{ background: 'url("https://source.unsplash.com/1920x1080/?modern-art")', borderRadius: '8px', height:'75vh', backgroundSize: 'cover' }}>
+      <Col xs={6} style={{ background: 'url("https://picsum.photos/1920/1080?modern-art")', borderRadius: '8px', height:'75vh', backgroundSize: 'cover' }}>
       </Col>
       <Col xs={6} className='d-flex justify-content-center align-items-center' style={{borderRadius: '4px', background: 'rgb(255 255 255 / 80%)'}}>
         <div style={{width: '70%'}}>
@@ -20,7 +20,7 @@ const HeroCarousel = () => {
     </Carousel.Item>
     <Carousel.Item>
     <Row className='h-100'>
-      <Col xs={6} style={{ background: 'url("https://source.unsplash.com/1920x1080/?abstract-art")', borderRadius: '8px', height:'550px', backgroundSize: 'cover' }}>
+      <Col xs={6} style={{ background: 'url("https://picsum.photos/1920/1080?abstract-art")', borderRadius: '8px', height:'550px', backgroundSize: 'cover' }}>
       </Col>
       <Col xs={6} className='d-flex justify-content-center align-items-center' style={{borderRadius: '4px', background: 'rgb(255 255 255 / 80%)'}}>
         <div style={{width: '70%'}}>

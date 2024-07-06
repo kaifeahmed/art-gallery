@@ -5,19 +5,19 @@ const Gallery = () => {
     const artPieces = [
         {
           id: '1',
-          featured_image: 'https://source.unsplash.com/1200x900/?artwork',
+          featured_image: 'https://picsum.photos/1920/1080?artwork',
         },
         {
           id: '2',
-          featured_image: 'https://source.unsplash.com/1200x900/?art-painting',
+          featured_image: 'https://picsum.photos/1920/1080?art-painting',
         },
         {
           id: '3',
-          featured_image: 'https://source.unsplash.com/1200x900/?fine-art',
+          featured_image: 'https://picsum.photos/1920/1080?fine-art',
         },
         {
           id: '4',
-          featured_image: 'https://source.unsplash.com/1200x900/?modern-art',
+          featured_image: 'https://picsum.photos/1920/1080?modern-art',
         },
         {
           id: '5',

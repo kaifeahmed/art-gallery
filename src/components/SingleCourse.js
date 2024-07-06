@@ -95,7 +95,7 @@ const SingleCourse = () => {
     <>
     <Row className='m-0 px-4 py-5 bg-theme' style={{ background: 'rgb(255 255 255 / 90%)', overflowX: 'auto' }}>
      <Col xs ={7}>
-       <img src={artworkData.images ? artworkData.images[0] : ''} alt="Artwork by Tunji Adeniyi-Jones" className="img-fluid rounded" />
+       <img src={artworkData.images ? artworkData.images[0] : ''} style={{height: "400px", objectFit: 'cover', width: "100%"}} alt="Artwork by Tunji Adeniyi-Jones" className="img-fluid rounded" />
      </Col>
      <Col xs={5} className="p-5">
           <h1 className="mb-4" style={{fontWeight: '600'}}>{artworkData.title}</h1>

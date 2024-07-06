@@ -29,7 +29,7 @@ const AllClasses = () => {
         <div style={{ background: `url('${course.images[0]}') no-repeat center/cover`, height: '280px' }}></div>
         <div className='d-flex flex-column gap-0 mt-2'>
           <h6 className='m-0'>{course.title}</h6>
-          <p className='m-0' style={{ fontWeight: 'bold', fontSize: '14px' }}>{course.price}</p>
+          <p className='m-0' style={{ fontWeight: 'bold', fontSize: '14px' }}>PKR {course.price}</p>
         </div>
         </Link>
       </Col>
