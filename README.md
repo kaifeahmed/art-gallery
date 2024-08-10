@@ -1,4 +1,4 @@
-## Available Scripts
+## Instructions to install and run the application.
 
 In the project directory, you can run:
 
