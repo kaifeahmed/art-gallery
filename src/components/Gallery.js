@@ -21,35 +21,35 @@ const Gallery = () => {
         },
         {
           id: '5',
-          featured_image: 'https://source.unsplash.com/1500x1000/?abstract-art',
+          featured_image: 'https://picsum.photos/1920/1080?art-painting',
         },
         {
           id: '6',
-          featured_image: 'https://source.unsplash.com/1500x1000/?canvas-art',
+          featured_image: 'https://picsum.photos/1920/1080?art-painting',
         },
         {
           id: '7',
-          featured_image: 'https://source.unsplash.com/1500x1000/?contemporary-art',
+          featured_image: 'https://picsum.photos/1920/1080?art-painting',
         },
         {
           id: '8',
-          featured_image: 'https://source.unsplash.com/1000x1500/?artistic',
+          featured_image: 'https://picsum.photos/1920/1080?art-painting',
         },
         {
           id: '9',
-          featured_image: 'https://source.unsplash.com/1000x1500/?art-gallery',
+          featured_image: 'https://picsum.photos/1920/1080?art-painting',
         },
         {
           id: '10',
-          featured_image: 'https://source.unsplash.com/1000x1500/?art-exhibition',
+          featured_image: 'https://picsum.photos/1920/1080?art-painting',
         },
         {
           id: '11',
-          featured_image: 'https://source.unsplash.com/1000x1500/?creative-art',
+          featured_image: 'https://picsum.photos/1920/1080?art-painting',
         },
         {
           id: '12',
-          featured_image: 'https://source.unsplash.com/1000x1500/?modern-painting',
+          featured_image: 'https://picsum.photos/1920/1080?art-painting',
         },
       ];
       

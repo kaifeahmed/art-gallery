@@ -892,7 +892,7 @@ h1, h2, h3, h4, h5, h6 {
 .app-sidebar .logo .logo-icon {
     width: 90px;
     font-size: 18px;
-    background: url("https://source.unsplash.com/?random") no-repeat;
+    background: url("https://picsum.photos/1920/1080?art-painting") no-repeat;
     background-position: center left;
     background-size: 100%;
     display: block;
